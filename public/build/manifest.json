@@ -1,0 +1,42 @@
+{
+  "resources/assets/fonts/Roboto/Roboto-Bold.ttf": {
+    "file": "assets/Roboto-Bold-SrW5_Vou.ttf",
+    "src": "resources/assets/fonts/Roboto/Roboto-Bold.ttf"
+  },
+  "resources/assets/fonts/Roboto/Roboto-Light.ttf": {
+    "file": "assets/Roboto-Light-MvOVFj2M.ttf",
+    "src": "resources/assets/fonts/Roboto/Roboto-Light.ttf"
+  },
+  "resources/assets/fonts/Roboto/Roboto-Medium.ttf": {
+    "file": "assets/Roboto-Medium-hSgykTIQ.ttf",
+    "src": "resources/assets/fonts/Roboto/Roboto-Medium.ttf"
+  },
+  "resources/assets/fonts/Roboto/Roboto-Regular.ttf": {
+    "file": "assets/Roboto-Regular-R3gZys7A.ttf",
+    "src": "resources/assets/fonts/Roboto/Roboto-Regular.ttf"
+  },
+  "resources/assets/images/i.webp": {
+    "file": "assets/i-dzZmiuRW.webp",
+    "src": "resources/assets/images/i.webp"
+  },
+  "resources/assets/images/rectangle.png": {
+    "file": "assets/rectangle-x2oN_7Pw.png",
+    "src": "resources/assets/images/rectangle.png"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-i_2tQlaC.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "assets": [
+      "assets/i-dzZmiuRW.webp"
+    ],
+    "css": [
+      "assets/app-4zDkzRqC.css"
+    ],
+    "file": "assets/app-XActfP4G.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
