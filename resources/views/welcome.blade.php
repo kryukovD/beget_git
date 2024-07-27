@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="ru">
 <head>
 	<!-- Yandex.Metrika counter -->
 	<script async type="text/javascript">

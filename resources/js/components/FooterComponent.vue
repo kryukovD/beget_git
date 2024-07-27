@@ -1,4 +1,5 @@
 <template>
+       
     <footer class="bg-blue-700 ">
         <div class="container  mx-auto">
             <div class="grid p-4 grid-cols-[repeat(auto-fit,minmax(180px,1fr))]  sm:grid-cols-[repeat(auto-fit,45%)] gap-4 text-white justify-between" >
