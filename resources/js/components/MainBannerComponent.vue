@@ -37,7 +37,7 @@ export default {
     <div class="container mx-auto xl:relative">
       <div class="main-banner__about columns-1 bg-circle xl:bg-cover mb-[20px]">
         <div
-          class="p-4  max-w-[360px] overflow-hidden  sm:max-w-[460px] xl:max-w-[600px] 2xl:max-w-[560px] translate-y-[20px] ">
+          class="pb-4  max-w-[360px] overflow-hidden  sm:max-w-[500px] xl:max-w-[600px] 2xl:max-w-[600px] translate-y-[20px] ">
           <img fetchpriority="high" class="grayscale m-auto w-[100%] h-[100%] object-contain rounded"
             src="../../assets/images/i.webp" alt="Дмитрий крюков разработчки в Петрозаводске" />
         </div>

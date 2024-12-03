@@ -29,6 +29,6 @@ class RequestFormController extends Controller
         $telegram_api_key = '7460171625:AAFnUXAxYDowDdljYSXVqa6_Ta_DXc4sxOA';
         $chat_id = '-4209554521';
         $telegram_url = "https://api.telegram.org/bot$telegram_api_key/sendMessage?chat_id=$chat_id&text=" . urlencode($txt);
-        $response = file_get_contents($telegram_url);
+        file_get_contents($telegram_url);
     }
 }

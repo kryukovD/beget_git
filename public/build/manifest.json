@@ -16,7 +16,7 @@
     "src": "resources/assets/fonts/Roboto/Roboto-Regular.ttf"
   },
   "resources/assets/images/i.webp": {
-    "file": "assets/i-dzZmiuRW.webp",
+    "file": "assets/i-JfE4cy7r.webp",
     "src": "resources/assets/images/i.webp"
   },
   "resources/assets/images/rectangle.png": {
@@ -24,18 +24,18 @@
     "src": "resources/assets/images/rectangle.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-i_2tQlaC.css",
+    "file": "assets/app-42WCCp5x.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
     "assets": [
-      "assets/i-dzZmiuRW.webp"
+      "assets/i-JfE4cy7r.webp"
     ],
     "css": [
       "assets/app-4zDkzRqC.css"
     ],
-    "file": "assets/app-keEt2hct.js",
+    "file": "assets/app-b2tXNEs9.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
