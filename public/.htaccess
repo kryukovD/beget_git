@@ -4,6 +4,10 @@
     </IfModule>
 
     RewriteEngine On
+    # Если не существует реального файла или директории, перенаправляем запрос на index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
@@ -18,4 +22,6 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+    
 </IfModule>

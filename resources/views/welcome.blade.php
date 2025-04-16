@@ -47,7 +47,7 @@
 	@vite('resources/css/app.css')
 </head>
 
-<body class="font-roboto  text-base sm:text-lg md:lg xl:text-xl font-normal">
+<body class="font-roboto  text-base sm:text-lg md:lg xl:text-xl font-normal" @scroll="console.log(true)">
 
 	<div id="app"></div>
 	@vite('resources/js/app.js')

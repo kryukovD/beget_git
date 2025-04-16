@@ -1,6 +1,6 @@
 import { createApp, h, nextTick } from 'vue'
 import App from "./App.vue"
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory,createWebHistory } from 'vue-router'
 import MainPageComponent from "./components/MainPageComponent.vue"
 import AdminPageComponent from "./components/AdminPageComponent.vue"
 import PortfolioPageComponent from "./components/PortfolioPageComponent.vue"
@@ -74,7 +74,7 @@ const app = createApp(App);
 
 export const router = createRouter({
   // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes, // short for `routes: routes`
   render: () => h(App)
 })

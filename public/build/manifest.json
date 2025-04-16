@@ -19,12 +19,8 @@
     "file": "assets/i-JfE4cy7r.webp",
     "src": "resources/assets/images/i.webp"
   },
-  "resources/assets/images/rectangle.png": {
-    "file": "assets/rectangle-x2oN_7Pw.png",
-    "src": "resources/assets/images/rectangle.png"
-  },
   "resources/css/app.css": {
-    "file": "assets/app-42WCCp5x.css",
+    "file": "assets/app-bjgkCs1Z.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -35,7 +31,7 @@
     "css": [
       "assets/app-4zDkzRqC.css"
     ],
-    "file": "assets/app-b2tXNEs9.js",
+    "file": "assets/app-AwHs_07Z.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

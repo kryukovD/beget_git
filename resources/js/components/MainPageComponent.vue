@@ -6,6 +6,8 @@ import TechnologiesComponent from './TechnologiesComponent.vue';
 import ServicesComponent from './ServicesComponent.vue';
 import FormComponent from "./FormComponent.vue";
 import FooterComponent from './FooterComponent.vue';
+import RecentWorks from './RecentWorks.vue';
+import UpperComponent from './UpperComponent.vue';
 
 export default {
     data() {
@@ -26,13 +28,22 @@ export default {
         'technologies-component': TechnologiesComponent,
         "services-component": ServicesComponent,
         "form-component": FormComponent,
-        "footer-component": FooterComponent
+        "footer-component": FooterComponent,
+        "recent-works":RecentWorks,
+        "upper-component":UpperComponent
     }
 }
 </script>
 <template>
     <main-banner></main-banner>
-    <technologies-component></technologies-component>
-    <services-component></services-component>
-    <form-component></form-component>
+    <hr>
+    <recent-works id="recent_works"></recent-works>
+    <hr>
+    <technologies-component id="stack"></technologies-component>
+    <hr>
+    <services-component id="services"></services-component>
+    <hr>
+    <form-component id="feedback"></form-component>
+    <hr>
+    <upper-component></upper-component>
 </template>

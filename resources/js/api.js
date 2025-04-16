@@ -83,6 +83,17 @@ export const  getAllPortfolio=async(data)=>{
     }
     
 }
+
+export const  getRecentPortfolio=async(data)=>{
+    try{
+        const responce=await axios.get(`${apiUrl}/api/getRecentPortfolio`);
+        return responce.data;
+    }
+    catch(e){
+        //console.log(e);
+    }
+    
+}
 export const  addPortfolio=async(data)=>{
     try{
         const responce=await axios.post(`${apiUrl}/api/addPortfolio`,data,config);

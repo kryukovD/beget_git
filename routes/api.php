@@ -37,6 +37,7 @@ Route::middleware('auth:api')->group(function(){
 Route::get("/getStack",[TechnologiesController::class,'getCategories']);
 Route::get("/getTechnologies",[TechnologiesController::class,'getTechnologies']);
 Route::get("/getPortfolio",[PortfoliosController::class,'getAll']);
+Route::get("/getRecentPortfolio",[PortfoliosController::class,'getRecent']);
 Route::get("/getPortfolioById/{id}/",[PortfoliosController::class,'getById']);
 Route::get("/getJobById/{id}/",[JobController::class,'getById']);
 Route::get("/getPrices",[PricesController::class,'getAll']);

@@ -47,6 +47,9 @@ class PortfoliosController extends Controller
 
 
     }
+    public function getRecent(){
+        return response()->json(Portfolio::orderByDesc("id")->orderBy("created_at","desc")->take(6)->get());
+    }
     public function getById($id)
     {
         return response()->json(Portfolio::find($id));

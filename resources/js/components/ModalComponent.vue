@@ -60,11 +60,11 @@ export default {
             </div>
           </div>
           <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-            <a :href="portfolioItem.link" class="relative inline-flex w-full justify-center  bg-purple-600 px-3 py-2 text-sm 
-              font-semibold text-white shadow-sm  sm:ml-3 sm:w-auto
+            <a :href="portfolioItem.link" class="relative inline-flex w-full justify-center box-shadow-theme bg-primary px-3 py-2 text-sm 
+              font-semibold  shadow-sm  sm:ml-3 sm:w-auto
               after:content-['']  after:h-[100%]
                after:w-[0px]  after:transition-[all]  after:delay-[150ms] after:left-[0px] 
-               after:bg-purple-600  after:top-[0px] after:absolute   hover:after:bg-purple-700  
+               after:bg-gray-200  after:top-[0px] after:absolute   hover:after:bg-gray-200  
                hover:after:w-[100%]">
               <span class="relative z-10">Перейти </span></a>
             <button @click="this.$emit('close')" type="button"
