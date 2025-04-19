@@ -104,10 +104,10 @@ export default {
             <div class="header__logo inline font-bold text-2xl md:text-3xl xl:text-4xl "> <router-link
                 to="/">DmitriyKryukov</router-link> </div>
           </div>
-          <div class="header__menu justify-self-end md:justify-self-start md:font-[500]">
+          <div class="header__menu justify-self-end md:justify-self-center md:font-[500]">
             <ul class="text-base text-m-color uppercase hidden md:flex  md:gap-10  md:justify-between lg:text-xl  ">
               <li
-                class="inline-flex relative gap-2 items-center group  hover:text-grey-theme  transtion ease-in duration-150 ">
+                class="inline-flex  relative gap-2 items-center group  hover:text-grey-theme  transtion ease-in duration-150 ">
                 <router-link :to="{ path: '/portfolio' }" activeClass="text-accent group">Портфолио</router-link> <svg
                   :class="{ 'stroke-accent': $route.path === '/portfolio' }" xmlns="http://www.w3.org/2000/svg"
                   fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -149,9 +149,9 @@ export default {
                 d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
             </svg>
             <div
-              class="header-menu-toggle  mb-4 z-50 shadow-sm invisible py-6 fixed w-[calc(100vw-142px)]  h-[100vh] translate-x-[100%] top-0 right-0 bg-primary  text-m-color transition ease-in delay-250 max-[380px]:w-[100vw]"
+              class="header-menu-toggle  mb-4 z-50 box-shadow-primary invisible py-6 fixed w-full  xs:w-[calc(100vw-100px)]  h-[100vh] translate-x-[100%] top-0 right-0 bg-primary  text-m-color transition ease-in delay-250 max-[380px]:w-[100vw]"
               :class="{ 'header-menu-toggle_active': isActiveMenu }" @click="isActiveMenu != isActiveMenu">
-              <ul class="header__list mt-10  text-lg px-4 font-normal ">
+              <ul class="header__list mt-10  text-xl px-4 font-normal ">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                   stroke="currentColor" class="w-6 h-6 absolute right-4 top-4 hover:stroke-blue-theme cursor-pointer"
                   @click="isActiveMenu = false">
@@ -161,8 +161,8 @@ export default {
                 <li class="mb-5" v-for="item in headerMenu" :key="item">
                   <router-link @click="isActiveMenu = false" :to="{ path: item.href }">{{ item.text }}</router-link>
                 </li>
-                <ul class="header__contacts font-normal text-lg ">
-                  <li class="mb-5">
+                <ul class="header__contacts font-normal text-xl ">
+                  <li class="mb-5 relative">
                     <a class="d-flex" href="tel:+79004628615">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-4 h-4 mr-1 0 inline">
@@ -170,10 +170,9 @@ export default {
                           d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                       </svg>
                       <span>+79004628615</span></a>
+                      <span class="absolute inset-0 shadow-[10px_10px_30px_5px_#2e9cca] w-0 group-hover:shadow-[10px_10px_30px_5px_#29648a]"></span>
                   </li>
-                  <li class="">
-
-
+                  <li class="relative">
                     <a href="mailto:dimjson5430@gmail.com">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-4 h-4 mr-1   inline">
@@ -181,6 +180,7 @@ export default {
                           d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                       </svg>
                       dimjson5430@gmail.com</a>
+                      <span class="absolute inset-0 shadow-[10px_10px_30px_5px_#2e9cca] w-0 group-hover:shadow-[10px_10px_30px_5px_#29648a]"></span>
                   </li>
                 </ul>
               </ul>
@@ -191,7 +191,7 @@ export default {
     </header>
     <div class="sub-header relative z-20 bg-gray-200 tex-lg" v-if='$route.path == "/"'>
       <div class="container px-4 ">
-        <ul class="sub-header__list flex gap-4 py-2 overscroll-none overflow-x-scroll xs:overflow-x-hidden">
+        <ul class="sub-header__list  flex gap-4 py-2 overscroll-none overflow-x-scroll xs:overflow-x-hidden">
 
           <li class="shrink-0 w-max transition delay-150 duration-300 ease-in-out hover:text-accent ">
             <a class="nav-link" href="#recent_works" @click.prevent="scrollToSection('recent_works')">#Недавние работы

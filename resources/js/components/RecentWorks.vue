@@ -3,12 +3,15 @@ import { getRecentPortfolio } from '../api.js'
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation } from 'swiper';
 import { onMounted, ref } from "vue";
+import ModalComponent from './ModalComponent.vue';
 import "swiper/css";
 export default {
     apiUrl: import.meta.env.VITE_API_SERVER,
     data() {
         return {
-            portfolios: []
+            portfolios: [],
+            isOpenModal: false,
+            currentItemPortfolio: Object
         };
     },
     created() {
@@ -33,13 +36,23 @@ export default {
     },
     components: {
         Swiper,
-        SwiperSlide
+        SwiperSlide,
+        "modal": ModalComponent
     },
+    methods: {
+        openModal(portfolio) {
+            console.log(true);
+            this.isOpenModal = true
+            this.currentItemPortfolio = portfolio
+        
+        }
+    }
 }
 
 </script>
 <template>
-    <section class="section-recent-work px-4 pt-6 mb-10 " >
+    <section class="section-recent-work px-4 pt-6 mb-10 ">
+        <modal :portfolioItem="currentItemPortfolio" :isOpen="isOpenModal" @close="isOpenModal = false"> </modal>
         <div class="container">
             <div class="flex justify-between items-center mb-4  md:mb-6">
                 <div class="relative">
@@ -48,7 +61,8 @@ export default {
                         class="absolute inset-0 shadow-[10px_10px_30px_5px_#2e9cca] w-0 group-hover:shadow-[10px_10px_30px_5px_#29648a]"></span>
                 </div>
                 <div class="arrows flex gap-4">
-                    <div class="arrow-left inline-flex cursor-pointer  box-shadow-theme p-1 h-min transition delay-150 duration-300 ease-in-out hover:bg-gray-200" ref="prev">
+                    <div class="arrow-left inline-flex cursor-pointer  box-shadow-theme p-1 h-min transition delay-150 duration-300 ease-in-out hover:bg-gray-200"
+                        ref="prev">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6 sm:size-6 xl:size-7 stroke-m-color">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -56,7 +70,8 @@ export default {
 
                         </svg>
                     </div>
-                    <div class="arrow-right inline-flex cursor-pointer box-shadow-theme p-1 h-min transition delay-150 duration-300 ease-in-out hover:bg-gray-200" ref="next">
+                    <div class="arrow-right inline-flex cursor-pointer box-shadow-theme p-1 h-min transition delay-150 duration-300 ease-in-out hover:bg-gray-200"
+                        ref="next">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6 sm:size-6 xl:size-7 stroke-m-color">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -78,9 +93,9 @@ export default {
                         @swiper="onSwiper">
 
                         <swiper-slide v-for="(portfolio, key) in portfolios" :key="portfolio.id"
-                            class="relative !h-auto">
+                            @click="openModal(portfolio)" class="relative !h-auto">
                             <div
-                                class="flex flex-col  h-full   portfolio-item items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:flex-wrap md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                class="flex flex-col cursor-pointer  h-full   portfolio-item items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:flex-wrap md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                                 <img width="427" height="213" :loading="key >= 2 ? 'lazy' : ''"
                                     :fetchpriority="key <= 2 ? 'high' : ''"
                                     class="object-contain w-full rounded-t-lg aspect-[2/1] pt-4 md:h-auto md:w-full md:rounded-none md:rounded-l-lg "

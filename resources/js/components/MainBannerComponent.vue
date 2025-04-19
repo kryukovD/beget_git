@@ -48,10 +48,10 @@ export default {
           <div class="text-left  mb-4 col-span-full">
             <span class="block mb-2  font-bold text-xl mb-0.5 md:text-3xl md:mb-8">ПРИВЕТ</span>
             <p class="max-w-[320px] xl:max-w-[500px]">
-              Меня зовут Дмитрий , я профессиональный веб разработчик.
+              Меня зовут Дмитрий, я профессиональный веб разработчик.
             </p>
           </div>
-          <div class="flex flex-wrap gap-4 mr-4 pb-4 sm:mt-8 col-span-full">
+          <div class="flex flex-wrap gap-4  pb-4 sm:mt-8 col-span-full">
             <router-link
               class=" uppercase text-sm inline-flex justify-center items-center bg-violet-theme  box-shadow-theme  px-6 py-4 md:text-xl xs:max-w-[187px] md:max-w-[231px] w-full font-[600]  relative 
                 after:content-['']  after:h-[100%] after:w-[0px]  after:transition-[all]  after:delay-[150ms] after:left-[0px] after:bg-gray-200  after:top-[0px] after:absolute   hover:after:bg-gray-200  hover:after:w-[100%] "
@@ -96,26 +96,37 @@ export default {
         <div class="w-full sm:block  md:w-full  md:mb-5  md:block  sm:mt-1  col-span-full ">
           <!-- component -->
           <div class="flex-1 bg-white rounded-lg shadow-xl mt-0 p-4 ">
-            <h4 class="text-xl text-m-color font-bold lg:text-2xl xl:text-3xl ">Места работы</h4>
-            <div class="relative px-4" v-if="jobs.length !== 0">
-              <div class="absolute h-full border border-dashed border-opacity-20 border-secondary"></div>
+            <div class="relative">
+              <h2 class="text-xl text-m-color font-bold lg:text-2xl xl:text-3xl ">Места работы</h2>
+              <span
+                class="absolute  inset-0 shadow-[10px_10px_30px_5px_#2e9cca] w-0 group-hover:shadow-[10px_10px_30px_5px_#29648a]"></span>
+            </div>
+
+            <div class="grid  sm:grid-cols-2">
+              <div class="relative px-4" v-if="jobs.length !== 0">
+                <div class="absolute h-full border border-dashed border-opacity-20 border-secondary"></div>
 
 
 
-              <!-- start::Timeline item -->
-              <div class="flex items-center w-full my-6 -ml-1.5" v-for="(job, key) in jobs" :key="key">
-                <div class="w-1/12 z-10">
-                  <div class="w-3.5 h-3.5 bg-accent-second rounded-full"></div>
+                <!-- start::Timeline item -->
+                <div class="flex items-center w-full my-6 -ml-1.5" v-for="(job, key) in jobs" :key="key">
+                  <div class="w-1/12 ">
+                    <div class="w-3.5 h-3.5 bg-accent-second rounded-full z-10 relative"></div>
+                  </div>
+                  <div class="w-11/12">
+                    <p class="text-xl xl:text-2xl">{{ job.name }}</p>
+                    <p class="text-sm  sm:text-xl xl:text-2xl">{{ job.position }}</p>
+                    <p class="text-sm sm:text-lg xl:text-xl ">{{ job.period_text }}</p>
+                  </div>
                 </div>
-                <div class="w-11/12">
-                  <p class="text-xl xl:text-2xl">{{ job.name }}</p>
-                  <p class="text-sm  sm:text-xl xl:text-2xl text-gray-500">{{ job.position }}</p>
-                  <p class="text-sm sm:text-lg xl:text-xl  text-gray-500">{{ job.period_text }}</p>
-                </div>
+                <!-- end::Timeline item -->
+
+
               </div>
-              <!-- end::Timeline item -->
 
-
+              <div class="bg-white aspect-[257/171] w-full" >
+                <img class="w-full h-full object-contain" width="668" height="445" src="../../assets/images/stack_m.png" alt="stack">
+              </div>
             </div>
           </div>
         </div>

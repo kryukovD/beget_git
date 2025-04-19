@@ -12,7 +12,7 @@ export default {
 
 <template>
   <div class="relative  " aria-labelledby="modal-title" role="dialog" aria-modal="true"
-    :class="{ 'hidden -z-10': isOpen == false, 'block z-10': isOpen }">
+    :class="{ 'hidden -z-10': isOpen == false, 'block z-40': isOpen }">
     <!--
       Background backdrop, show/hide based on modal state.
   
@@ -23,7 +23,9 @@ export default {
         From: "opacity-100"
         To: "opacity-0"
     -->
-    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" @click.self="$emit('close')"></div>
+    <div  class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity duration-300"
+  :class="{ 'opacity-0': !isOpen, 'opacity-100': isOpen }"
+  @click.self="$emit('close')"></div>
 
     <div class="fixed h-[70%] w-[90%] m-auto inset-0 z-10 w-screen ">
       <div class="flex mx-4 min-h-full  h-full items-center justify-center  text-center sm:items-center sm:p-0"

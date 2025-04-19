@@ -29,11 +29,11 @@ export default {
 }
 </script>
 <template>
-    <div class=" fixed bottom-4 left-0 right-0 z-10" v-if="showButton">
-        <div class="container mx-auto">
-            <div class="  flex w-full justify-end z-30 px-6 xxl:px-0">
+    <div class=" fixed bottom-[85px] left-0 right-0 h-0 z-30" v-if="showButton">
+        <div class="container mx-auto ">
+            <div class=" flex w-full justify-end relative  px-6 xxl:px-0 h-0">
                 <button @click="scrollUp"
-                    class="relative translate-x-[150%]  w-10 h-10 inline-flex justify-center bg-white items-center box-shadow-theme  transition delay-150 duration-300 ease-in-out hover:bg-gray-200">
+                    class="relative   w-10 h-10 inline-flex justify-center bg-white items-center box-shadow-theme  transition delay-150 duration-300 ease-in-out hover:bg-gray-200 xxl:translate-x-[75px]">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"

@@ -1,5 +1,13 @@
 <html lang="ru">
 <head>
+	
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Разработка сайтов в Петрозаводске и не только">
+	<meta property="og:description" content="Верстка сайта по макету, техническая поддержка сайтов, восстановление сайтов после вирусов, интеграция в cms Битрикс, Wordpress">
+	<meta property="og:url" content="https://krykov-studio.ru/">
+	<meta property="og:image" content="https://krykov-studio.ru/build/assets/i-JfE4cy7r.webp">
+	<meta property="og:site_name" content="krykov-studio.ru">
+	<meta property="og:locale" content="ru">
 	<!-- Yandex.Metrika counter -->
 	<script async type="text/javascript">
 		(function (m, e, t, r, i, k, a) {

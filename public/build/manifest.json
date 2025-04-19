@@ -19,19 +19,24 @@
     "file": "assets/i-JfE4cy7r.webp",
     "src": "resources/assets/images/i.webp"
   },
+  "resources/assets/images/stack_m.png": {
+    "file": "assets/stack_m-L8Ri39h_.png",
+    "src": "resources/assets/images/stack_m.png"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-bjgkCs1Z.css",
+    "file": "assets/app-e34BLz80.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
     "assets": [
-      "assets/i-JfE4cy7r.webp"
+      "assets/i-JfE4cy7r.webp",
+      "assets/stack_m-L8Ri39h_.png"
     ],
     "css": [
       "assets/app-4zDkzRqC.css"
     ],
-    "file": "assets/app-AwHs_07Z.js",
+    "file": "assets/app-mXHN-dr8.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
