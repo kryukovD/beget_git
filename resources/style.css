@@ -55,6 +55,9 @@ input:-webkit-autofill {
     background: #007aff;
     border-radius: 5px;
 }
+.grecaptcha-badge {
+    z-index: 25 !important;
+}
 
 
 

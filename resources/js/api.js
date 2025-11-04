@@ -52,9 +52,9 @@ export const getJobs = async () => {
         // console.log(e);
     }
 }
-export const sendRequestForm=async(name,email,message)=>{
+export const sendRequestForm=async(name,email,message,token)=>{
     try {
-        const responce=await axios.post(`${apiUrl}/api/sendForm`,{name:name,email:email,message:message});
+        const responce=await axios.post(`${apiUrl}/api/sendForm`,{name:name,email:email,message:message,recaptcha_token:token});
         return responce.data
     }
     catch (e) {

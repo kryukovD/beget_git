@@ -1,9 +1,11 @@
 <html lang="ru">
+
 <head>
-	
+
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Разработка сайтов в Петрозаводске и не только">
-	<meta property="og:description" content="Верстка сайта по макету, техническая поддержка сайтов, восстановление сайтов после вирусов, интеграция в cms Битрикс, Wordpress">
+	<meta property="og:description"
+		content="Верстка сайта по макету, техническая поддержка сайтов, восстановление сайтов после вирусов, интеграция в cms Битрикс, Wordpress">
 	<meta property="og:url" content="https://krykov-studio.ru/">
 	<meta property="og:image" content="https://krykov-studio.ru/build/assets/i-JfE4cy7r.webp">
 	<meta property="og:site_name" content="krykov-studio.ru">
@@ -30,20 +32,10 @@
 	<!-- /Yandex.Metrika counter -->
 	<meta charset="UTF-8" />
 	<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-
 	<link rel="preconnect" href="https://krykov-studio.ru" />
 	<link rel="dns-prefetch" href="https://krykov-studio.ru" />
 	<!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
-	<link rel="preload" fetchpriority="high" as="image" href="/build/assets/i-dzZmiuRW.webp" type="image/webp">
-	<link rel="preload" fetchpriority="high" as="image" href="/build/assets/rectangle-x2oN_7Pw.png" type="image/webp">
-
-	<link rel="preload" fetchpriority="low" as="image"
-		href="/storage/uploads/thumb_65ba8245c1b1d5xlsqRk0BkfmTfNhu3ivPS05QBeixVu8oPaQuCq2.webp" type="image/webp">
-	<link rel="preload" fetchpriority="low" as="image"
-		href="/storage/uploads/thumb_65ba82320812f2XQ8JSmU44bb64kbvXkjX1eTTrVBk87BCpc8rM4o.webp" type="image/webp">
-
-
-
+	<link rel="preload" fetchpriority="high" as="image" href="/build/assets/i-JfE4cy7r.webp" type="image/webp">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Дмитрий Крюков разработчик сайтов в Петрозаводске</title>
@@ -53,7 +45,14 @@
 		content="Сайт в петрозаводске, купить сайт в Петрозаводске, заказать сайт в Петрозаводске, купить сайт в Петрозаводске, веб разработчик , программист в Петрозаводске, Дмитрий Крюков программист, Битрикс программист в Петрозаводске" />
 
 	@vite('resources/css/app.css')
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfNMiMrAAAAAG5hGacwFg-dQTDpO-ED822C_Kw-"></script>
 </head>
+<style>
+	.grecaptcha-badge {
+		z-index: 25 !important;
+
+	}
+</style>
 
 <body class="font-roboto  text-base sm:text-lg md:lg xl:text-xl font-normal" @scroll="console.log(true)">
 

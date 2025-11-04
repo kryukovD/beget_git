@@ -6,10 +6,29 @@ use Illuminate\Http\Request;
 use App\Models\RequestForm;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Feedback;
+use Illuminate\Support\Facades\Http;
 class RequestFormController extends Controller
 {
     public function send(Request $request){
        $form= new RequestForm();
+
+       $token  = $request->input('recaptcha_token');
+
+       $response = Http::asForm()->post(
+           'https://www.google.com/recaptcha/api/siteverify',
+           [
+               'secret'   => '6LfNMiMrAAAAAHH5pvay3Q_TBDlh4uVf-0nn-dHc',
+               'response' => $token,
+               'remoteip' => $request->ip(),
+           ]
+       );
+   
+       $data = $response->json();
+          
+       if (!($data['success'] && $data['score'] >= 0.5 && $data['action'] === 'submit')) {
+           return response()->json(['message' => false], 422);
+       }
+
         $form->name=$request->input("name");
         $form->email=$request->input("email");
         $form->message=$request->input("message");
@@ -31,4 +50,6 @@ class RequestFormController extends Controller
         $telegram_url = "https://api.telegram.org/bot$telegram_api_key/sendMessage?chat_id=$chat_id&text=" . urlencode($txt);
         file_get_contents($telegram_url);
     }
+
+    
 }

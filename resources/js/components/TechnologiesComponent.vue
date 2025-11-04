@@ -73,7 +73,7 @@ export default {
       </div>
       <div class="flex justify-between gap-4">
         <div
-          class="slider-technologies_filter grow shrink-0 grid  grid-cols-[repeat(auto-fit,minmax(140px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(140px,max-content))] grid-flow-row gap-4  pb-6 md:grid-cols-[repeat(auto-fit,minmax(120px,max-content))] md:gap-4">
+          class="slider-technologies_filter grow shrink-0 grid  grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(140px,max-content))] grid-flow-row gap-4  pb-6 md:grid-cols-[repeat(auto-fit,minmax(120px,max-content))] md:gap-4">
           <span v-for="(item, i) of stack" :key="i" @click="filterTech(item.name), (active = i + 1)"
             :class="{ 'bg-violet-theme box-shadow-theme': active == i + 1 }"
             class=" shadow-xl whitespace-nowrap shrink-0 inline-flex cursor-pointer justify-center items-center rounded-md bg-violet-light-theme px-2 py-1 font-[500]  text-m-color ring-1 ring-inset ring-blue-700/10 md:w-[max-content]">{{

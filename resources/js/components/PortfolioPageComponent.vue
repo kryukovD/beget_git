@@ -1,6 +1,7 @@
 <script>
 import ModalComponent from './ModalComponent.vue';
 import { getAllPortfolio } from '../api.js'
+
 export default {
   apiUrl: import.meta.env.VITE_API_SERVER,
   data() {
@@ -17,7 +18,8 @@ export default {
       perPage: 9,
       pages: [],
       activeNumber: 1,
-      currentItemPortfolio: Object
+      currentItemPortfolio: Object,
+      loadedPortofolios: false,
     };
   },
 
@@ -64,6 +66,7 @@ export default {
   created() {
     getAllPortfolio().then((response) => {
       this.portfolios = response
+      this.loadedPortofolios-=true
     })
   },
   watch: {
@@ -84,7 +87,9 @@ export default {
     <modal :portfolioItem="currentItemPortfolio" :isOpen="isOpenModal" @close="isOpenModal = false"> </modal>
 
     <div class="container mx-auto px-4 mt-6">
-      <h1 class="font-sfiu font-bold flex items-center gap-3 mb-2 text-xl text-m-color font-bold lg:text-2xl xl:text-3xl">Портфолио
+      <h1
+        class="font-sfiu font-bold flex items-center gap-3 mb-2 text-xl text-m-color font-bold lg:text-2xl xl:text-3xl">
+        Портфолио
 
         <svg class="w-8 h-8 fill-accent-second" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 437.744 437.744" xml:space="preserve">
@@ -102,10 +107,10 @@ export default {
       </h1>
       <p class="pb-4 md:mb-12 "> В этом разделе собраны все мои работы &#128570; </p>
 
-      
 
-      <div
-        class="grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] pb-4 gap-3 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] lg:md:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] lg:gap-10">
+
+      <div v-if="loadedPortofolios"
+        class="grid auto-rows-fr grid-cols-[repeat(auto-fit,minmax(230px,1fr))] pb-4 gap-3 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] lg:md:grid-cols-[repeat(3,1fr)] lg:gap-10">
 
         <div v-for="(portfolio, key) in displayedPosts" :key="portfolio.id" @click="openModal(portfolio)"
           class="flex flex-col cursor-pointer portfolio-item items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:flex-wrap md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
@@ -121,6 +126,20 @@ export default {
         </div>
 
 
+      </div>
+
+      <div v-else
+        class="grid auto-rows-fr grid-cols-[repeat(auto-fit,minmax(230px,1fr))] pb-4 gap-3 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] lg:md:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] lg:gap-10">
+        <div v-for="(item, key) in new Array(9)" :key="key" 
+          class="flex flex-col cursor-pointer portfolio-item items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:flex-wrap md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <div class="w-full aspect-[427/213] pt-4"></div>
+          <div class="flex flex-col w-full justify-between p-4 leading-normal">
+            <h5
+              class="mb-2 text-base font-bold tracking-tight bg-gray-200 text-gray-200 sm:text-lg md:text-xl xl:text-2xl">
+              Загрузка...</h5>
+            <p class="mb-3 font-normal bg-gray-200 text-gray-200 dark:text-gray-400 line-clamp-2">Загрузка Загрузка Загрузка Загрузка Загрузка Загрузка Загрузка Загрузка Загрузка</p>
+          </div>
+        </div>
       </div>
 
     </div>
