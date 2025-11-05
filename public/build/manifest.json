@@ -24,7 +24,7 @@
     "src": "resources/assets/images/stack_m.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-euEpckAS.css",
+    "file": "assets/app-dtAUZtJF.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -36,7 +36,7 @@
     "css": [
       "assets/app-4zDkzRqC.css"
     ],
-    "file": "assets/app-lBDkOBz1.js",
+    "file": "assets/app-5CA4ecWC.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
