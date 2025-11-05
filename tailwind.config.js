@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const plugin = require('tailwindcss/plugin')
 export default {
-    important: true,
+    important: true ,
     content: [
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
@@ -56,16 +56,16 @@ export default {
         plugin(function ({addUtilities}) {
             const newUtilities = {
                 '.clip-path-rect': {
-                    clipPath: "polygon(95% 0, 100% 10%, 100% 100%, 0 100%, 0 0);"
+                    clipPath: "polygon(95% 0, 100% 10%, 100% 100%, 0 100%, 0 0) !important;"
                 },
                 '.clip-path-square': {
-                    clipPath: "polygon(85% 0, 100% 10%, 100% 100%, 0 100%, 0 0);"
+                    clipPath: "polygon(85% 0, 100% 10%, 100% 100%, 0 100%, 0 0) !important;"
                 },
                 '.box-shadow-primary': {
                     boxShadow: "0px 0px 5px #AAAAAA !important;"
                 },
                 '.box-shadow-theme': {
-                    boxShadow: "0px 0px 5px #007AFF; !important"
+                    boxShadow: "0px 0px 5px #007AFF !important; "
                 }
 
 
