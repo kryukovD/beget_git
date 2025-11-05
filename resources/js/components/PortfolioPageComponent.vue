@@ -129,15 +129,15 @@ export default {
       </div>
 
       <div v-else
-        class="grid auto-rows-fr grid-cols-[repeat(auto-fit,minmax(230px,1fr))] pb-4 gap-3 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] lg:md:grid-cols-[repeat(auto-fit,minmax(400px,1fr))] lg:gap-10">
-        <div v-for="(item, key) in new Array(9)" :key="key" 
+        class="grid auto-rows-fr grid-cols-[repeat(auto-fit,minmax(230px,1fr))] pb-4 gap-3 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] lg:md:grid-cols-[repeat(3,1fr)] lg:gap-10">
+        <div v-for="(item, key) in new Array(9)" :key="key"
           class="flex flex-col cursor-pointer portfolio-item items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:flex-wrap md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
           <div class="w-full aspect-[427/213] pt-4"></div>
           <div class="flex flex-col w-full justify-between p-4 leading-normal">
             <h5
               class="mb-2 text-base font-bold tracking-tight bg-gray-200 text-gray-200 sm:text-lg md:text-xl xl:text-2xl">
               Загрузка...</h5>
-            <p class="mb-3 font-normal bg-gray-200 text-gray-200 dark:text-gray-400 line-clamp-2">Загрузка Загрузка Загрузка Загрузка Загрузка Загрузка Загрузка Загрузка Загрузка</p>
+            <p class="mb-3 font-normal bg-gray-200 text-gray-200 dark:text-gray-400 line-clamp-2">Загрузка </p>
           </div>
         </div>
       </div>
