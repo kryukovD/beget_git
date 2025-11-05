@@ -177,7 +177,8 @@ export default {
             prevEl: prev,
             nextEl: next,
           }" :slides-per-view="1"
-                            :breakpoints="{ 0: { slidesPerView: 1 },360: { slidesPerView:2  }, 460: { slidesPerView: 2, spaceBetween: '15' }, 640: { centeredSlides: false, slidesPerView: 3, spaceBetween: '15' }, 1024: { slidesPerView: 1, spaceBetween: '30' }, 1280: { slidesPerView: 2, spaceBetween: '30' } }"
+                            :breakpoints="{ 0: { slidesPerView: 1 },360: { slidesPerView:2 ,spaceBetween: '15'  }, 460: { slidesPerView:
+                             2, spaceBetween: '15' }, 640: { centeredSlides: false, slidesPerView: 3, spaceBetween: '15' }, 1024: { slidesPerView: 1, spaceBetween: '30' }, 1280: { slidesPerView: 2, spaceBetween: '30' } }"
                             @swiper="onSwiper" @slideChange="onSlideChange">
 
 
