@@ -28,7 +28,7 @@ export default {
         </div>
         <p>То , что я реально могу вам предложить</p>
       </div>
-      <div class="grid lg:grid-cols-2 gap-4 auto-rows-fr">
+      <div class="grid lg:grid-cols-2 gap-4 md:auto-rows-fr">
         <div
           class=" w-full relative sm:w-full sm:h-[auto] md:w-full  box-shadow-primary lg:order-[-1] bg-accent-second ">
 
