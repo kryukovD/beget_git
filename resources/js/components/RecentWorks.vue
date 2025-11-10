@@ -41,10 +41,9 @@ export default {
     },
     methods: {
         openModal(portfolio) {
-            console.log(true);
             this.isOpenModal = true
             this.currentItemPortfolio = portfolio
-        
+
         }
     }
 }
@@ -105,8 +104,7 @@ export default {
                                     <h5
                                         class="mb-2 text-base font-bold tracking-tight text-gray-900 dark:text-white sm:text-lg md:text-xl xl:text-2xl">
                                         {{ portfolio.name }}</h5>
-                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-2"> {{
-                                        portfolio.description }}</p>
+                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-2" v-html="portfolio.description"> </p>
                                 </div>
                             </div>
 
@@ -115,7 +113,7 @@ export default {
                     </swiper>
 
                     <router-link
-                        class="m-auto uppercase text-sm flex justify-center items-center bg-violet-theme  box-shadow-theme text-m-color px-6 py-4 md:text-xl xs:max-w-[187px] md:max-w-[231px] w-full font-[600]  relative 
+                        class="m-auto uppercase text-sm flex justify-center items-center bg-violet-theme  box-shadow-theme text-m-color px-6 py-4 md:text-xl xs:max-w-[187px] md:max-w-[231px] w-full font-[600]  relative
                 after:content-['']  after:h-[100%] after:w-[0px]  after:transition-[all]  after:delay-[150ms] after:left-[0px] after:bg-gray-200  after:top-[0px] after:absolute   hover:after:bg-gray-200  hover:after:w-[100%] "
                         to="/portfolio"><span class="inline-flex relative items-center gap-2 z-10">Смотреть все
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

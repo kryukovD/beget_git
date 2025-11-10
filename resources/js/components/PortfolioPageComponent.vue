@@ -119,7 +119,7 @@ export default {
             <h5
               class="mb-2 text-base font-bold tracking-tight text-gray-900 dark:text-white sm:text-lg md:text-xl xl:text-2xl">
               {{ portfolio.name }}</h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-2"> {{ portfolio.description }}</p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-2" v-html="portfolio.html"> </p>
           </div>
         </div>
 

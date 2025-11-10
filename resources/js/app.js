@@ -106,5 +106,4 @@ router.beforeEach((to, from, next) => {
   }
 });
 
-
 app.use(router).use(VueAxios, axios).use(Vuex).mount('#app')
