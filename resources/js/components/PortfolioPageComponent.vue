@@ -105,9 +105,7 @@ export default {
 	c30.824,0,55.901-25.077,55.901-55.901V114.879h0.62c9.865,0,17.892,8.026,17.892,17.892V351.278z" />
         </svg>
       </h1>
-      <p class="pb-4 md:mb-12 "> В этом разделе собраны все мои работы &#128570; </p>
-
-
+      <p class="pb-4"> В этом разделе собраны все мои работы &#128570; </p>
 
       <div v-if="loadedPortofolios"
         class="grid auto-rows-fr grid-cols-[repeat(auto-fit,minmax(230px,1fr))] pb-4 gap-3 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] lg:md:grid-cols-[repeat(3,1fr)] lg:gap-10">
