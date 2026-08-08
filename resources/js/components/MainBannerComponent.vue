@@ -36,10 +36,10 @@ export default {
   <section class="main-banner relative  p-4 ">
     <div class="container mt-4 mx-auto xl:relative">
       <div class="main-banner__about grid grid-cols-2 gap-4  sm:gap-8 xl:bg-cover mb-[20px] ">
-        <div class="col-span-full mb-0  bg-gray-300 shadow-[0px_0px_5px_#333333] sm:col-start-1 sm:col-end-2">
+        <div class="col-span-full mb-0  bg-blue-300 shadow-[0px_0px_5px_#333333] sm:col-start-1 sm:col-end-2">
           <img fetchpriority="high" width="600" height="600"
             class="grayscale m-auto w-[100%] h-[100%] object-cover rounded clip-path-square"
-            src="../../assets/images/i.webp" alt="Дмитрий крюков разработчки в Петрозаводске" />
+            src="../../assets/images/dmitriyK_rev2.webp" alt="Дмитрий Крюков разработчик в Петрозаводске" />
         </div>
 
 
@@ -53,7 +53,7 @@ export default {
           </div>
           <div class="flex flex-wrap gap-4  pb-4 sm:mt-8 col-span-full">
             <router-link
-              class=" uppercase text-sm inline-flex justify-center items-center bg-violet-theme  box-shadow-theme  px-6 py-4 md:text-xl xs:max-w-[187px] md:max-w-[231px] w-full font-[600]  relative 
+              class=" uppercase text-sm inline-flex justify-center items-center bg-violet-theme  box-shadow-theme  px-6 py-4 md:text-xl xs:max-w-[187px] md:max-w-[231px] w-full font-[600]  relative
                 after:content-['']  after:h-[100%] after:w-[0px]  after:transition-[all]  after:delay-[150ms] after:left-[0px] after:bg-gray-200  after:top-[0px] after:absolute   hover:after:bg-gray-200  hover:after:w-[100%] "
               to="/portfolio"><span class="inline-flex relative items-center gap-2 z-10">Портфолио
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -65,7 +65,7 @@ export default {
               </span></router-link>
 
             <a target="_blank" href="https://t.me/dmitriykryuk"
-              class=" inline-flex justify-center items-center uppercase text-sm w-full  cursor-pointer bg-violet-theme box-shadow-theme  xs:max-w-[187px] md:max-w-max  px-6 py-4 md:text-xl font-[600]  relative 
+              class=" inline-flex justify-center items-center uppercase text-sm w-full  cursor-pointer bg-violet-theme box-shadow-theme  xs:max-w-[187px] md:max-w-max  px-6 py-4 md:text-xl font-[600]  relative
                 after:content-['']  after:h-[100%] after:w-[0px]  after:transition-[all]  after:delay-[150ms] after:left-[0px] after:bg-gray-200  after:top-[0px] after:absolute   hover:after:bg-gray-200  hover:after:w-[100%]">
               <span class="inline-flex relative items-center gap-2 z-10">Написать в ТГ <svg
                   xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

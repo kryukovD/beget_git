@@ -30,7 +30,7 @@ export default {
       </div>
       <div class="grid lg:grid-cols-2 gap-4 md:auto-rows-fr">
         <div
-          class=" w-full relative sm:w-full sm:h-[auto] md:w-full  box-shadow-primary lg:order-[-1] bg-accent-second ">
+          class=" w-full relative sm:w-full sm:h-[auto] md:w-full  box-shadow-primary lg:order-[-1] bg-blue-300 ">
 
           <div class="bg-primary text-m-color p-4  h-full clip-path-rect">
             <span class="block  font-bold text-xl mb-0.5 md:text-2xl"></span>
@@ -58,7 +58,7 @@ export default {
           </div>
         </div>
 
-        <div class="box-shadow-primary  bg-accent-second h-full ">
+        <div class="box-shadow-primary  bg-blue-300 h-full ">
           <ul class="bg-primary  p-4  h-full flex flex-col gap-4 order-1  p-4 clip-path-rect  ">
             <li class="flex items-center ">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
