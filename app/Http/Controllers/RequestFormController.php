@@ -22,9 +22,9 @@ class RequestFormController extends Controller
                'remoteip' => $request->ip(),
            ]
        );
-   
+
        $data = $response->json();
-          
+
        if (!($data['success'] && $data['score'] >= 0.5 && $data['action'] === 'submit')) {
            return response()->json(['message' => false], 422);
        }
@@ -35,10 +35,10 @@ class RequestFormController extends Controller
         $form->date=date('Y-m-d H:i:s');
         $form->save();
         Mail::to('dimjson5430@gmail.com')->send(new Feedback(['name'=>$form->name,'email'=>$form->email,'message'=>$form->message]));
-        $this->sendToTelegram($form->name,$form->email,$form->message);
+//        $this->sendToTelegram($form->name,$form->email,$form->message);
         return response()->json(["message"=>true]);
-        
-       
+
+
     }
     public function all(){
         return response()->json(RequestForm::orderBy("created_at",'desc')->get());
@@ -51,5 +51,5 @@ class RequestFormController extends Controller
         file_get_contents($telegram_url);
     }
 
-    
+
 }
