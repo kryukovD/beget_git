@@ -45,8 +45,8 @@ class RequestFormController extends Controller
     }
     public function sendToTelegram($name,$email,$text){
         $txt="Имя:$name\nEmail:$email\nСообщение:$text";
-        $telegram_api_key = '7460171625:AAFnUXAxYDowDdljYSXVqa6_Ta_DXc4sxOA';
-        $chat_id = '-4209554521';
+        $telegram_api_key = '8265006823:AAHW6dUOwV4wHs-KrZIKxOwWBhU3DjDsm2s';
+        $chat_id = '1175077529';
         $telegram_url = "https://api.telegram.org/bot$telegram_api_key/sendMessage?chat_id=$chat_id&text=" . urlencode($txt);
         file_get_contents($telegram_url);
     }
