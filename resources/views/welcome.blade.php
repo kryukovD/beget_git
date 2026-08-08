@@ -3,9 +3,10 @@
 <head>
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Разработка сайтов в Петрозаводске и не только">
+    <meta property="og:title" content="Разработка сайтов под ключ — Дмитрий Крюков | WordPress, PHP, JS">
     <meta property="og:description"
-          content="Верстка сайта по макету, техническая поддержка сайтов, восстановление сайтов после вирусов, интеграция в cms Битрикс, Wordpress">
+          content="Дмитрий Крюков — разработка современных сайтов под ключ.
+		Создание сайтов на WordPress, PHP, JavaScript, адаптивная верстка, интеграции и доработка существующих проектов.">
     <meta property="og:url" content="https://krykov-studio.ru/">
     <meta property="og:image" content="https://krykov-studio.ru/build/assets/i-JfE4cy7r.webp">
     <meta property="og:site_name" content="krykov-studio.ru">
