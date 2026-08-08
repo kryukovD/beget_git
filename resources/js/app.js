@@ -16,7 +16,7 @@ import Vuex from 'vuex'
 import store from "./store.js"
 import { getUser } from "./api.js"
 const routes = [
-  { path: '/', component: MainPageComponent, meta: { title: 'Дмитрий Крюков - web разработчик в Петрозаводске' } },
+  { path: '/', component: MainPageComponent, meta: { title: 'Разработка сайтов под ключ — Дмитрий Крюков | WordPress, PHP, JS' } },
   { path: '/portfolio', component: PortfolioPageComponent, meta: { title: 'Мои работы' } },
   {
     path: '/private/login', component: LoginComponent, name: 'login',
